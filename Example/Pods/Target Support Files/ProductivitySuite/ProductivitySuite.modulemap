@@ -1,0 +1,6 @@
+framework module ProductivitySuite {
+  umbrella header "ProductivitySuite-umbrella.h"
+
+  export *
+  module * { export * }
+}
