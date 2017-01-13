@@ -31,6 +31,7 @@ platform :ios do
   desc "This will also make sure the profile is up to date"
   lane :beta do
     match(type: "development",
+          readonly: true,
           git_url: ENV['WALTERMVP_MATCH_URL']) # more information: https://codesigning.guide
     gym(scheme: "ProductivitySuite-Example") # Build your app - more options available
     s3(
