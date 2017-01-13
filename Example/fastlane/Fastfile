@@ -30,12 +30,18 @@ platform :ios do
   desc "Submit a new Beta Build to Apple TestFlight"
   desc "This will also make sure the profile is up to date"
   lane :beta do
-    match(type: "development") # more information: https://codesigning.guide
+    match(type: "development",
+          git_url: ENV['WALTERMVP_MATCH_URL']) # more information: https://codesigning.guide
     gym(scheme: "ProductivitySuite-Example") # Build your app - more options available
-    pilot
-
-    # sh "your_script.sh"
-    # You can also use other beta testing services here (run `fastlane actions`)
+    s3(
+       access_key: ENV['WALTERMVP_S3_ACCESS_KEY'],
+       secret_access_key: ENV['WALTERMVP_S3_SECRET_ACCESS_KEY'],
+       bucket: ENV['WALTERMVP_S3_BUCKET'],
+       path: 'dev/MyVeeta_v{CFBundleShortVersionString}_b{CFBundleVersion}/',
+       upload_metadata: true,
+       version_file_name: 'app_version.json',
+       html_file_name: "ProductivitySuite-Example.html"
+       )
   end
 
   desc "Deploy a new version to the App Store"
