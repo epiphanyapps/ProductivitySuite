@@ -17,7 +17,7 @@ default_platform :ios
 
 platform :ios do
   before_all do
-     ENV["SLACK_URL"] = "https://hooks.slack.com/services/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"
+     ENV["SLACK_URL"] = ENV['EPIPHANYAPPS_WEBHOOK']
     cocoapods
     
   end
