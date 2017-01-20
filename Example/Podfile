@@ -3,6 +3,7 @@ use_frameworks!
 target 'ProductivitySuite_Example' do
     
     pod 'Alamofire'
+    pod 'Firebase/Core'
     pod 'ProductivitySuite', :path => '../'
     
     target 'ProductivitySuite_Tests' do
