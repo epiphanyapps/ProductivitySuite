@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
+   <FileRef
+      location = "group:Gemfile"
+      assignedFileDataType = "public.ruby-script">
+   </FileRef>
    <Group
       location = "group:fastlane"
       name = "fastlane">
@@ -10,6 +14,10 @@
       </FileRef>
       <FileRef
          location = "group:Appfile"
+         assignedFileDataType = "public.ruby-script">
+      </FileRef>
+      <FileRef
+         location = "group:Pluginfile"
          assignedFileDataType = "public.ruby-script">
       </FileRef>
    </Group>

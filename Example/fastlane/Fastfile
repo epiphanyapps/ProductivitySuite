@@ -35,17 +35,23 @@ platform :ios do
   lane :beta do
     match(type: "development",
           readonly: true,
-          git_url: ENV['WALTERMVP_MATCH_URL']) # more information: https://codesigning.guide
-    gym(scheme: "ProductivitySuite-Example") # Build your app - more options available
-    s3(
-       access_key: ENV['WALTERMVP_S3_ACCESS_KEY'],
-       secret_access_key: ENV['WALTERMVP_S3_SECRET_ACCESS_KEY'],
-       bucket: ENV['WALTERMVP_S3_BUCKET'],
-       path: 'dev/MyVeeta_v{CFBundleShortVersionString}_b{CFBundleVersion}/',
-       upload_metadata: true,
-       version_file_name: 'app_version.json',
-       html_file_name: "ProductivitySuite-Example.html"
-       )
+          git_url: ENV['WALTERMVP_MATCH_URL'])
+    gym(scheme: "ProductivitySuite-Example")
+    aws_s3(
+           access_key: ENV['WALTERMVP_S3_ACCESS_KEY'],
+           secret_access_key: ENV['WALTERMVP_S3_SECRET_ACCESS_KEY'],
+           bucket: ENV['WALTERMVP_S3_BUCKET'],
+           region: "us-east-1",
+           ipa: 'ProductivitySuite_Example.ipa',
+           dsym: 'ProductivitySuite_Example.app.dSYM.zip',
+           path: 'ProductivitySuite_Example/ProductivitySuite-Example_v{CFBundleShortVersionString}_b{CFBundleVersion}/',
+           upload_metadata: true,
+           version_file_name: 'ProductivitySuite_Example/app_version.json',
+           version_template_path: 'path/to/erb',
+           html_file_name: 'ProductivitySuite_Example/ProductivitySuite_Example.html'
+           
+           )
+
   end
 
   desc "Deploy a new version to the App Store"
@@ -84,7 +90,7 @@ platform :ios do
                               thumb_url: "http://example.com/path/to/thumb.png",
                               fields: [{
                                       title: "Download link",
-                                      value: "https://waltermvp.s3.amazonaws.com/ProductivitySuite-Example.html",
+                                      value: "https://waltermvp.s3.amazonaws.com/ProductivitySuite_Example/ProductivitySuite_Example.html",
                                       short: true,
                                       }]
                                     }
