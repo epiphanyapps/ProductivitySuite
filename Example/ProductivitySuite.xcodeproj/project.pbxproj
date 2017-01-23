@@ -220,6 +220,7 @@
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 28UAY82S25;
 						LastSwiftMigration = 0820;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -526,6 +527,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 52B4495873CE676ACC860AAB /* Pods-ProductivitySuite_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 28UAY82S25;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -534,6 +536,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ProductivitySuite_Example.app/ProductivitySuite_Example";
 			};
 			name = Debug;
 		};
@@ -541,10 +544,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 15BBE192EE7074AF12D027EB /* Pods-ProductivitySuite_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 28UAY82S25;
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ProductivitySuite_Example.app/ProductivitySuite_Example";
 			};
 			name = Release;
 		};

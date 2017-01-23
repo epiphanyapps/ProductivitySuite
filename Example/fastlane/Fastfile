@@ -24,7 +24,10 @@ platform :ios do
 
   desc "Runs all the tests"
   lane :test do
-    scan
+      scan(
+           scheme: "ProductivitySuite-Example",
+           destination:'platform=iOS,id=b10bb689eec9cb03dbc524fb5d6be6d03cbdc8b4'
+           )
   end
 
   desc "Submit a new Beta Build to Apple TestFlight"
