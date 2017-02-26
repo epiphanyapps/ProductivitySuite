@@ -33,6 +33,15 @@ platform :ios do
   desc "Submit a new Beta Build to Apple TestFlight"
   desc "This will also make sure the profile is up to date"
   lane :beta do
+    register_devices(
+                       devices: {
+                       "Sascha's iPhone 6S" => "687c3478292eddfb2d68298d9c8b84c3b98cc5de",
+                       "Sascha's iPhone 7" => "230c24e9119b33a7f710a52bf855ba4b24b81606",
+                       "Walter's iPhone 7" => "f9fe7a840b90c2d1c69e2fe62da1d2d50755d3b6",
+                       "Jan Pichler" =>       "043223f34838800153631265779374188d54dab1",
+                       "Walter's 42mm Apple Watch Series 2" => "a3e1dae316aa19842746774adaf50fa34ab02996"
+                       }
+                    )
     match(type: "development",
           readonly: true,
           git_url: ENV['WALTERMVP_MATCH_URL'])
