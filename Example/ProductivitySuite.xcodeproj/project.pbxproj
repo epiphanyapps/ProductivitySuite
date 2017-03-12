@@ -53,7 +53,7 @@
 		975A33E2B01297EC84A2CF0E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		B56DCA36F7318A1DA01ACDA3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		F26FB3A3F1740BF103C0295D /* Pods_ProductivitySuite_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProductivitySuite_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F4A3AC8AE714EC2AFAC34ACC /* ProductivitySuite.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ProductivitySuite.podspec; path = ../ProductivitySuite.podspec; sourceTree = "<group>"; };
+		F4A3AC8AE714EC2AFAC34ACC /* ProductivitySuite.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = ProductivitySuite.podspec; path = ../ProductivitySuite.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -529,6 +529,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7A0B0CAD2494861A008798A8 /* Pods-ProductivitySuite_Example.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 28UAY82S25;
 				INFOPLIST_FILE = ProductivitySuite/Info.plist;
@@ -543,6 +544,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1CBFF6E3393FD1AB2B03D3EA /* Pods-ProductivitySuite_Example.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 28UAY82S25;
 				INFOPLIST_FILE = ProductivitySuite/Info.plist;
@@ -557,6 +559,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4C60BA341F5E4AB41722ABDC /* Pods-ProductivitySuite_Tests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 28UAY82S25;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -574,6 +577,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 793ACA40165A18E6C7B99C4A /* Pods-ProductivitySuite_Tests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 28UAY82S25;
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
