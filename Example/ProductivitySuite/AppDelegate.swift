@@ -8,7 +8,7 @@
 
 import UIKit
 import Alamofire
-import Firebase
+import ProductivitySuite
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,8 +17,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-
-        FIRApp.configure()
+        
+        Alamofire.request(TodoRouter.getTodoList)
+            .validate()
+            .responseJSON { (response) in
+                switch response.result {
+                case .success(let value):
+                    print("yay \(value)")
+                case .failure(let error):
+                    print(error)
+                }
+        }
+        
+        
         return true;
         
     }
