@@ -24,6 +24,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 switch response.result {
                 case .success(let value):
                     print("yay \(value)")
+
+                    if let dict = value as? [[String: Any]] {
+                        dict.forEach({ (dict) in
+                            print(dict)
+                        })
+                    }
                 case .failure(let error):
                     print(error)
                 }
