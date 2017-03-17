@@ -1,7 +1,6 @@
 // https://github.com/Quick/Quick
 
 import Quick
-import Nimble
 import ProductivitySuite
 
 class TableOfContentsSpec: QuickSpec {
