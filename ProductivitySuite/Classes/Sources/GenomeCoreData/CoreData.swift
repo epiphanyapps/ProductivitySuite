@@ -1,10 +1,8 @@
-#if Xcode
-
 import CoreData
     
 extension NSManagedObjectContext : Context {}
 
-open class ManagedObject: NSManagedObject, Genome.MappableBase {
+open class ManagedObject: NSManagedObject, MappableBase {
     public enum Error: Swift.Error {
         case expectedManagedObjectContext
         case unableToCreateObject
@@ -46,5 +44,3 @@ private func make<T: ManagedObject>(type: T.Type, with map: Map) throws -> T {
     try new.sequence(map)
     return new
 }
-
-#endif
