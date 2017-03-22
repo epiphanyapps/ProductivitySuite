@@ -106,10 +106,10 @@ platform :ios do
           default_payloads: [:git_branch, :git_author, :last_git_commit_message],
           
           attachment_properties: {
-                              thumb_url: "http://example.com/path/to/thumb.png",
+                              thumb_url: "https://waltermvp.s3.amazonaws.com/ProductivitySuite_Example/EA.png",
                               fields: [{
                                       title: "Download link",
-                                      value: "https://waltermvp.s3.amazonaws.com/ProductivitySuite_Example/ProductivitySuite_Example.html",
+                                      value: "https://waltermvp.s3.amazonaws.com/ProductivitySuite_Example/ProductivitySuite-Example.html",
                                       short: true,
                                       }]
                                     }
