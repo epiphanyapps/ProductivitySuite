@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Alamofire
 import ProductivitySuite
 
 @UIApplicationMain
@@ -17,24 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
-        Alamofire.request(TodoRouter.getTodoList)
-            .validate()
-            .responseJSON { (response) in
-                switch response.result {
-                case .success(let value):
-                    print("yay \(value)")
-
-                    if let dict = value as? [[String: Any]] {
-                        dict.forEach({ (dict) in
-                            print(dict)
-                        })
-                    }
-                case .failure(let error):
-                    print(error)
-                }
-        }
-        
         
         return true;
         
