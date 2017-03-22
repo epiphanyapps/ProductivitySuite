@@ -52,7 +52,7 @@ platform :ios do
        bucket: ENV['WALTERMVP_S3_BUCKET'],
        path: 'ProductivitySuite_Example/ProductivitySuite_Example_v{CFBundleShortVersionString}_b{CFBundleVersion}/',
        upload_metadata: true,
-       version_file_name: 'app_version.json',
+       version_file_name: 'ProductivitySuite_Example/app_version.json',
        html_file_name: "ProductivitySuite_Example.html"
        )
 
