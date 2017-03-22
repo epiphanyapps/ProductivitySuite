@@ -22,9 +22,6 @@
   "dependencies": {
     "Alamofire": [
       "~> 4.4.0"
-    ],
-    "Genome": [
-
     ]
   }
 }

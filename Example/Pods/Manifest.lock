@@ -1,18 +1,7 @@
 PODS:
   - Alamofire (4.4.0)
-  - Genome (3.0.2):
-    - Genome/Default (= 3.0.2)
-  - Genome/Core (3.0.2):
-    - Genome/Packages
-  - Genome/Default (3.0.2):
-    - Genome/Core
-    - Genome/Foundation
-  - Genome/Foundation (3.0.2):
-    - Genome/Core
-  - Genome/Packages (3.0.2)
   - ProductivitySuite (0.1.0):
     - Alamofire (~> 4.4.0)
-    - Genome
   - Quick (1.1.0)
 
 DEPENDENCIES:
@@ -26,10 +15,9 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
-  Genome: 44584c1e971899a5a4b20ee87faee452a5f1ac1a
-  ProductivitySuite: d48c8ff6e466ba56d6921e4dd843cd54359a25c2
+  ProductivitySuite: 726c2b8664e6459b02588cc11b1d5f4078454a93
   Quick: dafc587e21eed9f4cab3249b9f9015b0b7a7f71d
 
 PODFILE CHECKSUM: 582e8047413a4d10ca7a035fe832bb19e144264d
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.2.0

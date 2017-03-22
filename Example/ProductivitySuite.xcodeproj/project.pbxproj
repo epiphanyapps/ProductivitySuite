@@ -43,11 +43,9 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		753375DB1E820F040040A3AB /* TodoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoTableViewController.swift; sourceTree = "<group>"; };
 		7546EA5F1E31A21C0029E58E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		757B63CC1E625F2800D6A254 /* Appfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = Appfile; sourceTree = "<group>"; };
-		757B63CD1E625F2800D6A254 /* Fastfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = Fastfile; sourceTree = "<group>"; };
-		757B63CE1E625F2800D6A254 /* Pluginfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = Pluginfile; sourceTree = "<group>"; };
-		757B63CF1E625F2900D6A254 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		757B63D01E625F2900D6A254 /* Gemfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = Gemfile; sourceTree = "<group>"; };
+		75D187D91E82DBF6008D4743 /* Appfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = Appfile; sourceTree = "<group>"; };
+		75D187DA1E82DBF6008D4743 /* Fastfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = Fastfile; sourceTree = "<group>"; };
+		75D187DB1E82DF8C008D4743 /* Pluginfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = Pluginfile; sourceTree = "<group>"; };
 		793ACA40165A18E6C7B99C4A /* Pods-ProductivitySuite_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProductivitySuite_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProductivitySuite_Tests/Pods-ProductivitySuite_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		7A0B0CAD2494861A008798A8 /* Pods-ProductivitySuite_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProductivitySuite_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProductivitySuite_Example/Pods-ProductivitySuite_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		975A33E2B01297EC84A2CF0E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -90,7 +88,7 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
-				757B63CA1E625F1500D6A254 /* Misc */,
+				75D187D81E82DBF6008D4743 /* fastlane */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for ProductivitySuite */,
 				607FACE81AFB9204008FA782 /* Tests */,
@@ -168,22 +166,12 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		757B63CA1E625F1500D6A254 /* Misc */ = {
+		75D187D81E82DBF6008D4743 /* fastlane */ = {
 			isa = PBXGroup;
 			children = (
-				757B63CB1E625F2800D6A254 /* fastlane */,
-				757B63D01E625F2900D6A254 /* Gemfile */,
-			);
-			name = Misc;
-			sourceTree = "<group>";
-		};
-		757B63CB1E625F2800D6A254 /* fastlane */ = {
-			isa = PBXGroup;
-			children = (
-				757B63CC1E625F2800D6A254 /* Appfile */,
-				757B63CD1E625F2800D6A254 /* Fastfile */,
-				757B63CE1E625F2800D6A254 /* Pluginfile */,
-				757B63CF1E625F2900D6A254 /* README.md */,
+				75D187D91E82DBF6008D4743 /* Appfile */,
+				75D187DA1E82DBF6008D4743 /* Fastfile */,
+				75D187DB1E82DF8C008D4743 /* Pluginfile */,
 			);
 			path = fastlane;
 			sourceTree = "<group>";
