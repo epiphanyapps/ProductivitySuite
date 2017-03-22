@@ -17,7 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        return true;
+        if let navController = window?.rootViewController as? UINavigationController,
+            let todoController = navController.topViewController as? TodoTableViewController {
+            todoController.managedObjectContext = SharedDataManager.managedObjectContext
+        }
+
+        return true
         
     }
 

@@ -12,11 +12,12 @@ import CoreData
 
 class TodoTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
 
-    var managedObjectContext: NSManagedObjectContext? = SharedDataManager.managedObjectContext
+    var managedObjectContext: NSManagedObjectContext?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        title = "Todos"
         Todo.fetchTodos { (success) in
             print("success \(success)")
         }
