@@ -50,10 +50,10 @@ platform :ios do
        access_key: ENV['WALTERMVP_S3_ACCESS_KEY'],
        secret_access_key: ENV['WALTERMVP_S3_SECRET_ACCESS_KEY'],
        bucket: ENV['WALTERMVP_S3_BUCKET'],
-       path: 'dev/MyVeeta_v{CFBundleShortVersionString}_b{CFBundleVersion}/',
+       path: 'ProductivitySuite_Example/ProductivitySuite_Example_v{CFBundleShortVersionString}_b{CFBundleVersion}/',
        upload_metadata: true,
        version_file_name: 'app_version.json',
-       html_file_name: "ProductivitySuite-Example.html"
+       html_file_name: "ProductivitySuite_Example.html"
        )
 
 #    aws_s3(
@@ -109,7 +109,7 @@ platform :ios do
                               thumb_url: "https://waltermvp.s3.amazonaws.com/ProductivitySuite_Example/EA.png",
                               fields: [{
                                       title: "Download link",
-                                      value: "https://waltermvp.s3.amazonaws.com/ProductivitySuite_Example/ProductivitySuite-Example.html",
+                                      value: "https://waltermvp.s3.amazonaws.com/ProductivitySuite_Example/ProductivitySuite_Example.html",
                                       short: true,
                                       }]
                                     }
