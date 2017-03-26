@@ -36,6 +36,7 @@
 		63A809B72410089FB3FB0F6C9B4A1F79 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B9C4D1F5DAA9702016FB0D610F2356 /* Configuration.swift */; };
 		645500B3C96321BD5575DF4EEBBC2D13 /* QCKDSL.m in Sources */ = {isa = PBXBuildFile; fileRef = D08DD2775311C2A5C6689D3533BD9869 /* QCKDSL.m */; };
 		668005B000C42F48A486B1E1A38AA7F1 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740808367FF97B0D24A8364D8C3D64A /* ReplaceMe.swift */; };
+		750C61FC1E884A8300E05A8D /* ProductivitySuite.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 750C61FA1E884A8300E05A8D /* ProductivitySuite.xcdatamodeld */; };
 		7B5FE28C7EA4122B0598738E54DBEBD8 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D936B242F1EE737B67DE86B7AFC6E26A /* SessionDelegate.swift */; };
 		7D8CC01E8C9EFFF9F4D65406CDE0AB66 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04879476F76EE1600B9BA00B41A0B3D9 /* Result.swift */; };
 		816D0C0CE0037E885A8582FDD15D3978 /* Pods-ProductivitySuite_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A6534594371779E9A611C078D407436F /* Pods-ProductivitySuite_Example-dummy.m */; };
@@ -155,6 +156,7 @@
 		69C817280C02712173EA912487F9FB11 /* Quick-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Quick-prefix.pch"; sourceTree = "<group>"; };
 		6A3B70748762F327B68B887EB01A516B /* QuickTestSuite.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QuickTestSuite.swift; path = Sources/Quick/QuickTestSuite.swift; sourceTree = "<group>"; };
 		71B4A1D51CE20D10EBCACB1CA5382010 /* Pods-ProductivitySuite_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ProductivitySuite_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		750C61FB1E884A8300E05A8D /* ProductivitySuite.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ProductivitySuite.xcdatamodel; sourceTree = "<group>"; };
 		7510C219558DC8451C4F0E66FA9DEE77 /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
 		754D53B5A9A5086193A87C4BBFE76DAF /* XCTestSuite+QuickTestSuiteBuilder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "XCTestSuite+QuickTestSuiteBuilder.m"; path = "Sources/QuickObjectiveC/XCTestSuite+QuickTestSuiteBuilder.m"; sourceTree = "<group>"; };
 		758F689F183BCD697E8137A6F3B4CE25 /* Pods-ProductivitySuite_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ProductivitySuite_Tests-frameworks.sh"; sourceTree = "<group>"; };
@@ -403,6 +405,7 @@
 		56C84194FFB8C1F073EA77FB50ABF137 /* ProductivitySuite */ = {
 			isa = PBXGroup;
 			children = (
+				750C61F91E884A8300E05A8D /* Assets */,
 				0ACF6B41222020DCDB9E51281EEFB517 /* Classes */,
 			);
 			path = ProductivitySuite;
@@ -420,6 +423,14 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Alamofire";
+			sourceTree = "<group>";
+		};
+		750C61F91E884A8300E05A8D /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				750C61FA1E884A8300E05A8D /* ProductivitySuite.xcdatamodeld */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 		7B05826141F5DEB7AF13094100054778 /* Frameworks */ = {
@@ -751,6 +762,7 @@
 			files = (
 				E7C7C3EF9D67E7DDB548604D43DB2C3A /* DataManager.swift in Sources */,
 				3157271D849E6EC257DD3F39F65E7C69 /* ProductivitySuite-dummy.m in Sources */,
+				750C61FC1E884A8300E05A8D /* ProductivitySuite.xcdatamodeld in Sources */,
 				668005B000C42F48A486B1E1A38AA7F1 /* ReplaceMe.swift in Sources */,
 				9AF8FFB1B445F5AEDEB3B74015F2DA45 /* Todo+CoreDataClass.swift in Sources */,
 				0C9A55A546046D7CAB920B041312D3D0 /* Todo+CoreDataProperties.swift in Sources */,
@@ -1275,6 +1287,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		750C61FA1E884A8300E05A8D /* ProductivitySuite.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				750C61FB1E884A8300E05A8D /* ProductivitySuite.xcdatamodel */,
+			);
+			currentVersion = 750C61FB1E884A8300E05A8D /* ProductivitySuite.xcdatamodel */;
+			path = ProductivitySuite.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 }
