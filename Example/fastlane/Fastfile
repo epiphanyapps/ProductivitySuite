@@ -59,11 +59,11 @@ platform :ios do
              version_template_path: 'path/to/erb',
              html_file_name: 'ProductivitySuite_Example/ProductivitySuite_Example.html'
              )
-#     crashlytics(
-#                 api_token: ENV['CRASHLYTICS_API_TOKEN'],
-#                 build_secret: ENV['CRASHLYTICS_BUILD_SECRET'],
-#                 notes: "Automatic iOS Dev Build"
-#                 )
+     crashlytics(
+                 api_token: ENV['2098d6a61ee941aa919089a50ae19559f173b2b4'],
+                 build_secret: ENV['8b59285951bec6738c7283a9da37773b5e746f1b11b72a87e1c7496c3f0297cd'],
+                 notes: "Fastlane iOS Dev Build"
+                 )
       
   end
 
