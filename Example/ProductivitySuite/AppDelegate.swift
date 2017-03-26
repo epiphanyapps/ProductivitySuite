@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import ProductivitySuite
 import Fabric
 import Crashlytics
 
@@ -19,12 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        Fabric.with([Crashlytics.self])
-        if let navController = window?.rootViewController as? UINavigationController,
-            let todoController = navController.topViewController as? TodoTableViewController {
-            todoController.managedObjectContext = SharedDataManager.managedObjectContext
-        }
-        
+        Fabric.with([Crashlytics.self])        
         
         return true
         
