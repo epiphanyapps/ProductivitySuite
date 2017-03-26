@@ -189,6 +189,7 @@
 				607FACCE1AFB9204008FA782 /* Resources */,
 				714DCC39AF725AF2B116C23E /* [CP] Embed Pods Frameworks */,
 				BF3325DF228451174CA8AA45 /* [CP] Copy Pods Resources */,
+				750C61FD1E88520400E05A8D /* Crashlytics */,
 			);
 			buildRules = (
 			);
@@ -328,6 +329,20 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ProductivitySuite_Example/Pods-ProductivitySuite_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		750C61FD1E88520400E05A8D /* Crashlytics */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Crashlytics;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 2098d6a61ee941aa919089a50ae19559f173b2b4 8b59285951bec6738c7283a9da37773b5e746f1b11b72a87e1c7496c3f0297cd";
 		};
 		9BEBB5363335FEBF50489A61 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

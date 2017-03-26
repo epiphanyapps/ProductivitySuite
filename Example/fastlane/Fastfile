@@ -58,10 +58,13 @@ platform :ios do
              version_file_name: 'ProductivitySuite_Example/app_version.json',
              version_template_path: 'path/to/erb',
              html_file_name: 'ProductivitySuite_Example/ProductivitySuite_Example.html'
-             
              )
+#     crashlytics(
+#                 api_token: ENV['CRASHLYTICS_API_TOKEN'],
+#                 build_secret: ENV['CRASHLYTICS_BUILD_SECRET'],
+#                 notes: "Automatic iOS Dev Build"
+#                 )
       
-
   end
 
   desc "Deploy a new version to the App Store"
@@ -91,19 +94,19 @@ platform :ios do
               channel: "#fastlane-bitrise",
               success: true,
               payload: {
-              "Build Date" => Time.new.to_s,
-              "Built by" => builtBy,
+                  "Build Date" => Time.new.to_s,
+                  "Built by" => builtBy,
               },
               default_payloads: [:git_branch, :git_author, :last_git_commit_message],
               
               attachment_properties: {
-              thumb_url: "https://waltermvp.s3.amazonaws.com/ProductivitySuite_Example/EA.png",
-              fields: [{
-              title: "Download link",
-              value: "https://waltermvp.s3.amazonaws.com/ProductivitySuite_Example/ProductivitySuite_Example.html",
-              short: true,
-              }]
-              }
+                  thumb_url: "https://waltermvp.s3.amazonaws.com/ProductivitySuite_Example/EA.png",
+                  fields: [{
+                      title: "Download link",
+                      value: "https://waltermvp.s3.amazonaws.com/ProductivitySuite_Example/ProductivitySuite_Example.html",
+                      short: true,
+                      }]
+                  }
               )
     end
 

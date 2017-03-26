@@ -9,6 +9,7 @@
 import UIKit
 import ProductivitySuite
 import CoreData
+import Crashlytics
 
 class TodoTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
 
@@ -22,7 +23,14 @@ class TodoTableViewController: UITableViewController, NSFetchedResultsController
             print("success \(success)")
         }
         
+        let crashButton = UIBarButtonItem(barButtonSystemItem: .stop, target: self, action: #selector(TodoTableViewController.crashButtonTapped(_:)))
+        navigationItem.rightBarButtonItem = crashButton
     }
+    
+    func crashButtonTapped(_ sender: AnyObject) {
+        Crashlytics.sharedInstance().crash()
+    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
