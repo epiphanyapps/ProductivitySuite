@@ -3,16 +3,14 @@ use_frameworks!
 target 'ProductivitySuite_Example' do
     
     pod 'Alamofire', '~> 4.4.0'
+    pod 'Crashlytics'
     pod 'ProductivitySuite', :path => '../'
     
     target 'ProductivitySuite_Tests' do
         inherit! :search_paths
         
         pod 'Quick'
-        pod 'Nimble'
-#       pod 'FBSnapshotTestCase'
-#       pod 'Nimble-Snapshots'
-
+        
     end
     
 end

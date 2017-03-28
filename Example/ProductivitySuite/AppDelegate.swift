@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import Alamofire
-import ProductivitySuite
+import Fabric
+import Crashlytics
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,19 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        Alamofire.request(TodoRouter.getTodoList)
-            .validate()
-            .responseJSON { (response) in
-                switch response.result {
-                case .success(let value):
-                    print("yay \(value)")
-                case .failure(let error):
-                    print(error)
-                }
-        }
-        
-        
-        return true;
+        Fabric.with([Crashlytics.self])        
+
+        return true
         
     }
 
@@ -58,4 +48,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
-

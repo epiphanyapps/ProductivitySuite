@@ -35,8 +35,12 @@ TODO: Add long description of the pod here.
   # s.resource_bundles = {
   #   'ProductivitySuite' => ['ProductivitySuite/Assets/*.png']
   # }
+   s.resource_bundles = {
+     'ProductivitySuite' => ['ProductivitySuite/Assets/*.xcdatamodeld']
+   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   s.dependency 'Alamofire', '~> 4.4.0'
+
 end

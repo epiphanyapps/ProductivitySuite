@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
-		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		750C61FF1E8859F500E05A8D /* ShellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750C61FE1E8859F500E05A8D /* ShellViewController.swift */; };
+		753375DC1E820F040040A3AB /* TodoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753375DB1E820F040040A3AB /* TodoTableViewController.swift */; };
 		7546EA601E31A21C0029E58E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7546EA5F1E31A21C0029E58E /* GoogleService-Info.plist */; };
 		919B24386571C61BF86FC16F /* Pods_ProductivitySuite_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F26FB3A3F1740BF103C0295D /* Pods_ProductivitySuite_Tests.framework */; };
 		B63661A994B473C384BE2D15 /* Pods_ProductivitySuite_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3630BC7F2525F84187B9DD /* Pods_ProductivitySuite_Example.framework */; };
@@ -35,19 +36,18 @@
 		607FACD01AFB9204008FA782 /* ProductivitySuite_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProductivitySuite_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* ProductivitySuite_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProductivitySuite_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		750C61FE1E8859F500E05A8D /* ShellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShellViewController.swift; sourceTree = "<group>"; };
+		753375DB1E820F040040A3AB /* TodoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoTableViewController.swift; sourceTree = "<group>"; };
 		7546EA5F1E31A21C0029E58E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		757B63CC1E625F2800D6A254 /* Appfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = Appfile; sourceTree = "<group>"; };
-		757B63CD1E625F2800D6A254 /* Fastfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = Fastfile; sourceTree = "<group>"; };
-		757B63CE1E625F2800D6A254 /* Pluginfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = Pluginfile; sourceTree = "<group>"; };
-		757B63CF1E625F2900D6A254 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		757B63D01E625F2900D6A254 /* Gemfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = Gemfile; sourceTree = "<group>"; };
+		75D187D91E82DBF6008D4743 /* Appfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = Appfile; sourceTree = "<group>"; };
+		75D187DA1E82DBF6008D4743 /* Fastfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = Fastfile; sourceTree = "<group>"; };
+		75D187DB1E82DF8C008D4743 /* Pluginfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = Pluginfile; sourceTree = "<group>"; };
 		793ACA40165A18E6C7B99C4A /* Pods-ProductivitySuite_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProductivitySuite_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProductivitySuite_Tests/Pods-ProductivitySuite_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		7A0B0CAD2494861A008798A8 /* Pods-ProductivitySuite_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProductivitySuite_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProductivitySuite_Example/Pods-ProductivitySuite_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		975A33E2B01297EC84A2CF0E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -90,7 +90,7 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
-				757B63CA1E625F1500D6A254 /* Misc */,
+				75D187D81E82DBF6008D4743 /* fastlane */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for ProductivitySuite */,
 				607FACE81AFB9204008FA782 /* Tests */,
@@ -113,7 +113,8 @@
 			isa = PBXGroup;
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				750C61FE1E8859F500E05A8D /* ShellViewController.swift */,
+				753375DB1E820F040040A3AB /* TodoTableViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -168,22 +169,12 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		757B63CA1E625F1500D6A254 /* Misc */ = {
+		75D187D81E82DBF6008D4743 /* fastlane */ = {
 			isa = PBXGroup;
 			children = (
-				757B63CB1E625F2800D6A254 /* fastlane */,
-				757B63D01E625F2900D6A254 /* Gemfile */,
-			);
-			name = Misc;
-			sourceTree = "<group>";
-		};
-		757B63CB1E625F2800D6A254 /* fastlane */ = {
-			isa = PBXGroup;
-			children = (
-				757B63CC1E625F2800D6A254 /* Appfile */,
-				757B63CD1E625F2800D6A254 /* Fastfile */,
-				757B63CE1E625F2800D6A254 /* Pluginfile */,
-				757B63CF1E625F2900D6A254 /* README.md */,
+				75D187D91E82DBF6008D4743 /* Appfile */,
+				75D187DA1E82DBF6008D4743 /* Fastfile */,
+				75D187DB1E82DF8C008D4743 /* Pluginfile */,
 			);
 			path = fastlane;
 			sourceTree = "<group>";
@@ -201,6 +192,7 @@
 				607FACCE1AFB9204008FA782 /* Resources */,
 				714DCC39AF725AF2B116C23E /* [CP] Embed Pods Frameworks */,
 				BF3325DF228451174CA8AA45 /* [CP] Copy Pods Resources */,
+				750C61FD1E88520400E05A8D /* Crashlytics */,
 			);
 			buildRules = (
 			);
@@ -341,6 +333,20 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ProductivitySuite_Example/Pods-ProductivitySuite_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		750C61FD1E88520400E05A8D /* Crashlytics */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Crashlytics;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 2098d6a61ee941aa919089a50ae19559f173b2b4 8b59285951bec6738c7283a9da37773b5e746f1b11b72a87e1c7496c3f0297cd";
+		};
 		9BEBB5363335FEBF50489A61 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -393,8 +399,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				753375DC1E820F040040A3AB /* TodoTableViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				750C61FF1E8859F500E05A8D /* ShellViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -533,6 +540,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 28UAY82S25;
 				INFOPLIST_FILE = ProductivitySuite/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.epiphanyapps.ProductivitySuite-Example";
@@ -548,6 +556,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 28UAY82S25;
 				INFOPLIST_FILE = ProductivitySuite/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.epiphanyapps.ProductivitySuite-Example";

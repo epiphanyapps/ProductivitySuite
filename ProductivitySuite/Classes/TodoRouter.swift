@@ -9,7 +9,21 @@
 import Foundation
 import Alamofire
 
+/**
+ endpoints:
+ GET - https://nf8ditto54.execute-api.us-east-1.amazonaws.com/dev/todos
+ GET - https://nf8ditto54.execute-api.us-east-1.amazonaws.com/dev/todos/{id}
+ PUT - https://nf8ditto54.execute-api.us-east-1.amazonaws.com/dev/todos/{id}
+ 
+ 
+ 
+ curl -X POST https://nf8ditto54.execute-api.us-east-1.amazonaws.com/dev/todos --data '{ "text": "Learn Serverless" }'
+ curl -X GET https://nf8ditto54.execute-api.us-east-1.amazonaws.com/dev/todos
+ curl -X GET https://nf8ditto54.execute-api.us-east-1.amazonaws.com/dev/todos/{id}
+ curl -X PUT https://nf8ditto54.execute-api.us-east-1.amazonaws.com/dev/todos/{id} --data '{ "text": "Learn Serverless" }'
+ cur -X DELETE - https://nf8ditto54.execute-api.us-east-1.amazonaws.com/dev/todos/{id}
 
+*/
 public enum TodoRouter: URLRequestConvertible {
     
     case createTodo(parameters: Parameters)

@@ -1,13 +1,15 @@
 PODS:
   - Alamofire (4.4.0)
-  - Nimble (5.1.1)
+  - Crashlytics (3.8.4):
+    - Fabric (~> 1.6.3)
+  - Fabric (1.6.11)
   - ProductivitySuite (0.1.0):
     - Alamofire (~> 4.4.0)
-  - Quick (1.0.0)
+  - Quick (1.1.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.4.0)
-  - Nimble
+  - Crashlytics
   - ProductivitySuite (from `../`)
   - Quick
 
@@ -17,10 +19,11 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
-  Nimble: 415e3aa3267e7bc2c96b05fa814ddea7bb686a29
-  ProductivitySuite: 726c2b8664e6459b02588cc11b1d5f4078454a93
-  Quick: 8024e4a47e6cc03a9d5245ef0948264fc6d27cff
+  Crashlytics: 79e236942ca1e7fc641df1feb9a275360a78ab6a
+  Fabric: 5911403591946b8228ab1c51d98f1d7137e863c6
+  ProductivitySuite: f53859b4c5cc1352bad273e2f524b8fb08886002
+  Quick: dafc587e21eed9f4cab3249b9f9015b0b7a7f71d
 
-PODFILE CHECKSUM: 9bdc83b4a0e97e479da3606214aca1ab35c97457
+PODFILE CHECKSUM: 772e34ab3f7ef2d85c796f8b6be45fa0d36e4e6f
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.2.0

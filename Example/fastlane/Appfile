@@ -2,7 +2,6 @@ app_identifier "com.epiphanyapps.ProductivitySuite-Example" # The bundle identif
 apple_id "walter.vargaspena@gmail.com" # Your Apple email address
 
 team_id "28UAY82S25"  # Developer Portal Team ID
-itc_team_id "607921"
 
 # you can even provide different app identifiers, Apple IDs and team names per lane:
 # More information: https://github.com/fastlane/fastlane/blob/master/fastlane/docs/Appfile.md
