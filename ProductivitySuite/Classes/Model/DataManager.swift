@@ -33,7 +33,10 @@ public class DataManager: NSObject {
     
     lazy var managedObjectModel: NSManagedObjectModel = {
         let bundle = Bundle(for: type(of: self))
-        let modelURL = bundle.url(forResource: "ProductivitySuite", withExtension: "momd")!
+        ///This is due to cocoapods packaging assets in another bundle
+        let embeddedBundleURL = bundle.url(forResource: "ProductivitySuite", withExtension: "bundle")!
+        let embeddedBundle = Bundle(url: embeddedBundleURL)!
+        let modelURL = embeddedBundle.url(forResource: "ProductivitySuite", withExtension: "momd")!
         return NSManagedObjectModel(contentsOf: modelURL)!
     }()
     

@@ -2,18 +2,14 @@ PODS:
   - Alamofire (4.4.0)
   - Crashlytics (3.8.4):
     - Fabric (~> 1.6.3)
-  - CrashlyticsRecorder (2.0.2)
   - Fabric (1.6.11)
   - ProductivitySuite (0.1.0):
     - Alamofire (~> 4.4.0)
-    - CrashlyticsRecorder
   - Quick (1.1.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.4.0)
   - Crashlytics
-  - CrashlyticsRecorder
-  - Fabric
   - ProductivitySuite (from `../`)
   - Quick
 
@@ -24,11 +20,10 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
   Crashlytics: 79e236942ca1e7fc641df1feb9a275360a78ab6a
-  CrashlyticsRecorder: 80c5134d9fce1e60684e1f9cd8f6120572a55515
   Fabric: 5911403591946b8228ab1c51d98f1d7137e863c6
-  ProductivitySuite: 2853a857d6eb175404f4cbb29697ad1e992d3029
+  ProductivitySuite: f53859b4c5cc1352bad273e2f524b8fb08886002
   Quick: dafc587e21eed9f4cab3249b9f9015b0b7a7f71d
 
-PODFILE CHECKSUM: 180435038141a85ce50a37f2146c7d6345464f0c
+PODFILE CHECKSUM: 772e34ab3f7ef2d85c796f8b6be45fa0d36e4e6f
 
 COCOAPODS: 1.2.0

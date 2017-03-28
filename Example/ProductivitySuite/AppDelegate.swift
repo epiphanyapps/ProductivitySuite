@@ -9,7 +9,6 @@
 import UIKit
 import Fabric
 import Crashlytics
-import CrashlyticsRecorder
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,8 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         Fabric.with([Crashlytics.self])        
-        Fabric.with([Crashlytics()])
-        _ = CrashlyticsRecorder.createSharedInstance(crashlytics: Crashlytics.sharedInstance())
 
         return true
         
@@ -51,16 +48,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
-
-
-extension Crashlytics: CrashlyticsProtocol {
-    public func log(_ format: String, args: CVaListPointer) {
-        #if DEBUG
-            CLSNSLogv(format, args)
-        #else
-            CLSLogv(format, args)
-        #endif
-    }
-}
-
-extension Answers: AnswersProtocol { }

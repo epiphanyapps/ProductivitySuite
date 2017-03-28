@@ -28,7 +28,7 @@ public class Todo: NSManagedObject {
                         todos.forEach({ (todo) in
                             context.performAndWait {
                                 do {
-                                    try Todo(data: todo, insertIntoManagedObjectContext: context)
+                                    let _ = try Todo(data: todo, insertIntoManagedObjectContext: context)
                                 } catch (let error) {
                                     print(error)
                                     completion?(false)
