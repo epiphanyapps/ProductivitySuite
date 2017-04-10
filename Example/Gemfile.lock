@@ -20,6 +20,11 @@ GEM
       aws-sdk-core (= 2.8.9)
     aws-sigv4 (1.0.0)
     babosa (1.0.2)
+    badge (0.8.4)
+      curb (~> 0.9)
+      fastimage (>= 1.6)
+      fastlane (>= 2.0)
+      mini_magick (>= 4.5)
     claide (1.0.1)
     cocoapods (1.2.0)
       activesupport (>= 4.0.2, < 5)
@@ -57,6 +62,7 @@ GEM
     colored (1.2)
     commander (4.4.3)
       highline (~> 1.7.2)
+    curb (0.9.3)
     domain_name (0.5.20170223)
       unf (>= 0.0.5, < 1.0.0)
     dotenv (2.2.0)
@@ -195,9 +201,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  badge
   cocoapods
   fastlane
   fastlane-plugin-aws_s3
 
 BUNDLED WITH
-   1.14.3
+   1.14.6
