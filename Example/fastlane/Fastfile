@@ -33,7 +33,7 @@ platform :ios do
       increment_build_number
       commit_version_bump(
                           message: "Version Bump",
-                          xcodeproj: "Example/ProductivitySuite.xcodeproj"
+                          xcodeproj: "ProductivitySuite.xcodeproj"
                           )
       swiftlint(
                 mode: :lint,
