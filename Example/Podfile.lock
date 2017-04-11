@@ -3,27 +3,49 @@ PODS:
   - Crashlytics (3.8.4):
     - Fabric (~> 1.6.3)
   - Fabric (1.6.11)
+  - Gifu (2.0.0)
+  - HanekeSwift (0.10.1)
+  - IGListKit (2.1.0):
+    - IGListKit/Default (= 2.1.0)
+  - IGListKit/Default (2.1.0):
+    - IGListKit/Diffing
+  - IGListKit/Diffing (2.1.0)
   - ProductivitySuite (0.1.0):
     - Alamofire (~> 4.4.0)
+    - IGListKit
   - Quick (1.1.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.4.0)
   - Crashlytics
+  - Gifu
+  - HanekeSwift (from `https://github.com/Haneke/HanekeSwift.git`, branch `feature/swift-3`)
+  - IGListKit
   - ProductivitySuite (from `../`)
   - Quick
 
 EXTERNAL SOURCES:
+  HanekeSwift:
+    :branch: feature/swift-3
+    :git: https://github.com/Haneke/HanekeSwift.git
   ProductivitySuite:
     :path: "../"
+
+CHECKOUT OPTIONS:
+  HanekeSwift:
+    :commit: 1157a124ec699f4ad926cb054f1d0bfce88ae7a9
+    :git: https://github.com/Haneke/HanekeSwift.git
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
   Crashlytics: 79e236942ca1e7fc641df1feb9a275360a78ab6a
   Fabric: 5911403591946b8228ab1c51d98f1d7137e863c6
-  ProductivitySuite: f53859b4c5cc1352bad273e2f524b8fb08886002
+  Gifu: 56a4d8f1092399159fa32662aa2232158b48d8ac
+  HanekeSwift: 4113367892828e7700d24a384027de6ebc79aad1
+  IGListKit: b826c68ef7a4ae1626c09d4d3e1ea7a169e6c36e
+  ProductivitySuite: 0bf26e914bb2d60c5f402bde5bee568e8dc60d50
   Quick: dafc587e21eed9f4cab3249b9f9015b0b7a7f71d
 
-PODFILE CHECKSUM: 772e34ab3f7ef2d85c796f8b6be45fa0d36e4e6f
+PODFILE CHECKSUM: c324688a3db314f53fb6722db533b5ffa69a205e
 
 COCOAPODS: 1.2.0
