@@ -24,7 +24,7 @@ final class GIFSectionController: IGListSectionController, IGListSectionType {
         return CGSize(width: collectionContext!.containerSize.width, height: GIFCell.height)
     }
     
-    //MARK: - Will test this func using UITests like FBSnapShots
+    //MARK: - Will test this func using UITests or FBSnapShots
     func cellForItem(at index: Int) -> UICollectionViewCell {
         let gifCell = collectionContext?.dequeueReusableCellFromStoryboard(withIdentifier: GIFCell.identifier, for: self, at: index) as! GIFCell
         
