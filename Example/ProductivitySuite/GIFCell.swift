@@ -8,6 +8,8 @@
 
 import UIKit
 import Gifu
+import Haneke
+import ProductivitySuite
 
 class GIFCell: UICollectionViewCell {
     static let identifier = "GIFCell"
@@ -23,7 +25,20 @@ class GIFCell: UICollectionViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         imageView.prepareForReuse()
-        print("prepareForReuse")
     }
-    
+
+    //MARK: - Will test this func using UITests like FBSnapShots
+
+    func configure( gif: GIF) {
+        
+        textLabel.text = gif.url
+        
+        let cache = Shared.dataCache
+        let url = URL(string: gif.gifURL)!
+        imageView.image = #imageLiteral(resourceName: "placeholder")
+        cache.fetch(URL: url).onSuccess { [weak self] gifData  in
+            self?.imageView.animate(withGIFData: gifData)
+        }
+
+    }
 }

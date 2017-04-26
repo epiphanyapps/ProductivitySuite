@@ -13,7 +13,13 @@ import ProductivitySuite
 import Haneke
 
 class GIFsViewController: UIViewController, IGListAdapterDataSource, NSFetchedResultsControllerDelegate {
-
+/**
+    These values allow us to get a random number between 10 & 50  ¯\_(ツ)_/¯
+ ///http://stackoverflow.com/questions/24132399/how-does-one-make-random-number-between-range-for-arc4random-uniform
+*/
+    static let upperLimit: UInt32 = 41
+    static let lowerLimit: UInt32 = 10
+    
     var managedObjectContext: NSManagedObjectContext?
     var fetchedResultsController: NSFetchedResultsController<GIF>?
     
@@ -64,8 +70,7 @@ class GIFsViewController: UIViewController, IGListAdapterDataSource, NSFetchedRe
     
 
     func fetchRandomAmount() {
-        ///http://stackoverflow.com/questions/24132399/how-does-one-make-random-number-between-range-for-arc4random-uniform
-        let random = arc4random_uniform(41) + 10;
+        let random = arc4random_uniform(GIFsViewController.upperLimit) + GIFsViewController.lowerLimit
         
         GIF.fetchGIFs(limit: Int(random)) { (success) in
             print("GIF FETCH \(success)")

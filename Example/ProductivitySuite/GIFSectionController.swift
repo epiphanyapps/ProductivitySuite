@@ -7,9 +7,8 @@
 //
 
 import IGListKit
-import ProductivitySuite
 import Alamofire
-import Haneke
+import ProductivitySuite
 
 final class GIFSectionController: IGListSectionController, IGListSectionType {
     
@@ -25,18 +24,11 @@ final class GIFSectionController: IGListSectionController, IGListSectionType {
         return CGSize(width: collectionContext!.containerSize.width, height: GIFCell.height)
     }
     
+    //MARK: - Will test this func using UITests like FBSnapShots
     func cellForItem(at index: Int) -> UICollectionViewCell {
         let gifCell = collectionContext?.dequeueReusableCellFromStoryboard(withIdentifier: GIFCell.identifier, for: self, at: index) as! GIFCell
-        gifCell.textLabel.text = gif.url
         
-        
-        let cache = Shared.dataCache
-        let url = URL(string: gif.gifURL)!
-        gifCell.imageView.image = #imageLiteral(resourceName: "placeholder")
-        cache.fetch(URL: url).onSuccess { gifData in
-            gifCell.imageView.animate(withGIFData: gifData)
-        }
-
+        gifCell.configure(gif: gif)
         
         return gifCell
     }

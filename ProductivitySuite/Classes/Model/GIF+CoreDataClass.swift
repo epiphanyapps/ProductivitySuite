@@ -13,7 +13,7 @@ import IGListKit
 
 @objc(GIF)
 public class GIF: NSManagedObject, IGListDiffable {
-
+// will write tests for testing dateFormatter
     public static let dateFormatter: DateFormatter = {
        let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd hh:mm:ss"
@@ -35,7 +35,7 @@ public class GIF: NSManagedObject, IGListDiffable {
         return frc
 
     }
-    
+    //MARK: - will write tests for FETCH GIF
     public static func fetchGIFs(limit: Int, completion: ((_ success: Bool) -> Void)? ) {
         
         Alamofire.request(GiphyTrendingRouter.trending(limit: limit))
@@ -126,7 +126,8 @@ public class GIF: NSManagedObject, IGListDiffable {
     }
     
     //MARK: - IGListDiffable
-    
+    //MARK: - will write tests for diffIdentifier
+
     public func diffIdentifier() -> NSObjectProtocol {
         return identifier as NSObjectProtocol
     }
