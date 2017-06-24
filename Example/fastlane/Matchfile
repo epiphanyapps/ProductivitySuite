@@ -1,4 +1,4 @@
-git_url "git@github.com:epiphanyapps/match.git"
+git_url "https://github.com/epiphanyapps/match.git"
 type "adhoc"
 username "walter.vargaspena@gmail.com"
 team_id "28UAY82S25"
