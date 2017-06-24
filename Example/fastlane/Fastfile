@@ -39,13 +39,8 @@ platform :ios do
               "Walter's 42mm Apple Watch Series 2" => "a3e1dae316aa19842746774adaf50fa34ab02996"
           }
       )
-      match(
-            type: "development",
-            readonly: true,
-            git_url: ENV['WALTERMVP_MATCH_URL'])
-            gym(scheme: "ProductivitySuite-Example"
-      )
-      
+      match
+      gym(scheme: "ProductivitySuite-Example")
       aws_s3(
              access_key: ENV['WALTERMVP_S3_ACCESS_KEY'],
              secret_access_key: ENV['WALTERMVP_S3_SECRET_ACCESS_KEY'],

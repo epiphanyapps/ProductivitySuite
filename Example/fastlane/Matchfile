@@ -1,0 +1,6 @@
+git_url "git@github.com:epiphanyapps/match.git"
+type "adhoc"
+username "walter.vargaspena@gmail.com"
+team_id "28UAY82S25"
+git_branch "adhoc-ProductivitySuite"
+app_identifier ["com.epiphanyapps.ProductivitySuite-Example"]
