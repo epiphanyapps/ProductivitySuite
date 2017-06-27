@@ -30,6 +30,11 @@ xcode-select --install
 
 # Available Actions
 ## iOS
+### ios addDevCertAndProfiles
+```
+fastlane ios addDevCertAndProfiles
+```
+add development certificate and profiles
 ### ios test
 ```
 fastlane ios test
