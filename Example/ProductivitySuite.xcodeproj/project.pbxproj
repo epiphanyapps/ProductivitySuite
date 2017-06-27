@@ -45,6 +45,7 @@
 		750C61FE1E8859F500E05A8D /* ShellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShellViewController.swift; sourceTree = "<group>"; };
 		753375DB1E820F040040A3AB /* TodoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoTableViewController.swift; sourceTree = "<group>"; };
 		7546EA5F1E31A21C0029E58E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		75CDA5E71EFF2A3600B076FA /* Matchfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = Matchfile; sourceTree = "<group>"; };
 		75D187D91E82DBF6008D4743 /* Appfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = Appfile; sourceTree = "<group>"; };
 		75D187DA1E82DBF6008D4743 /* Fastfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = Fastfile; sourceTree = "<group>"; };
 		75D187DB1E82DF8C008D4743 /* Pluginfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = Pluginfile; sourceTree = "<group>"; };
@@ -175,6 +176,7 @@
 				75D187D91E82DBF6008D4743 /* Appfile */,
 				75D187DA1E82DBF6008D4743 /* Fastfile */,
 				75D187DB1E82DF8C008D4743 /* Pluginfile */,
+				75CDA5E71EFF2A3600B076FA /* Matchfile */,
 			);
 			path = fastlane;
 			sourceTree = "<group>";
@@ -238,11 +240,12 @@
 						CreatedOnToolsVersion = 6.3.1;
 						DevelopmentTeam = 28UAY82S25;
 						LastSwiftMigration = 0820;
+						ProvisioningStyle = Manual;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = 28UAY82S25;
 						LastSwiftMigration = 0820;
+						ProvisioningStyle = Manual;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 				};
@@ -546,6 +549,8 @@
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.epiphanyapps.ProductivitySuite-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "056e89e7-4cc9-46a0-af1e-509dd35a7d86";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development com.epiphanyapps.ProductivitySuite-Example";
 			};
 			name = Debug;
 		};
@@ -563,6 +568,8 @@
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.epiphanyapps.ProductivitySuite-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "ec6bd960-792c-4a3e-bb4a-8fc436253c94";
+				PROVISIONING_PROFILE_SPECIFIER = "match AdHoc com.epiphanyapps.ProductivitySuite-Example";
 			};
 			name = Release;
 		};
@@ -571,7 +578,8 @@
 			baseConfigurationReference = 4C60BA341F5E4AB41722ABDC /* Pods-ProductivitySuite_Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = 28UAY82S25;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -580,6 +588,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ProductivitySuite_Example.app/ProductivitySuite_Example";
 			};
 			name = Debug;
@@ -589,11 +598,13 @@
 			baseConfigurationReference = 793ACA40165A18E6C7B99C4A /* Pods-ProductivitySuite_Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = 28UAY82S25;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ProductivitySuite_Example.app/ProductivitySuite_Example";
 			};
 			name = Release;
