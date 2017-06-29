@@ -5,6 +5,7 @@ target 'ProductivitySuite_Example' do
     pod 'Alamofire', '~> 4.4.0'
     pod 'Crashlytics'
     pod 'ProductivitySuite', :path => '../'
+    pod 'Swiftlint'
     
     target 'ProductivitySuite_Tests' do
         inherit! :search_paths
