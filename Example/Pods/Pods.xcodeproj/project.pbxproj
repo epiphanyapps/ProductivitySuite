@@ -72,6 +72,8 @@
 		6E29978EFDF56C1381F8FA97BF441FF9 /* IGListBindingSectionControllerDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 900D1BE41A904CCF2046ABEB83A35C1B /* IGListBindingSectionControllerDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		72D1D7268DBDEE2E18ABC8C2298B1DCF /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B0246B205F2BC4AB1666883BA0544E /* ReplaceMe.swift */; };
 		73B9C996AED49ED7CF8EC2A6F1738059 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8425F802DF869B8844D9D072CFCE373 /* Foundation.framework */; };
+		75386E881F08F6CE00759EA3 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75386E861F08F6CE00759EA3 /* User+CoreDataClass.swift */; };
+		75386E891F08F6CE00759EA3 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75386E871F08F6CE00759EA3 /* User+CoreDataProperties.swift */; };
 		76231739139FDBE7F0453C14AB57A3BE /* Todo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B980455E528E33727E7C60BC76DFD7 /* Todo+CoreDataClass.swift */; };
 		767048E9FCD6717839C70310E98B84E5 /* IGListAdapter+DebugDescription.h in Headers */ = {isa = PBXBuildFile; fileRef = 5439EFB39E0A005BE502977E61970DB1 /* IGListAdapter+DebugDescription.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		77AE3DA9A5188B6F7016E960974E77F7 /* IGListBatchUpdateState.h in Headers */ = {isa = PBXBuildFile; fileRef = FE0BB5916BBC8D5DDBB2BFA537834EAD /* IGListBatchUpdateState.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -251,6 +253,8 @@
 		71BA2B9ED8108DE491F8CB88340788A5 /* ResourceBundle-ProductivitySuite-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-ProductivitySuite-Info.plist"; sourceTree = "<group>"; };
 		71CE58217C9937448EB3A174F42EAB32 /* Crashlytics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Crashlytics.h; path = iOS/Crashlytics.framework/Headers/Crashlytics.h; sourceTree = "<group>"; };
 		733B59C343A7278F0A6C3F96AFB61383 /* IGListGenericSectionController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListGenericSectionController.h; path = Source/IGListGenericSectionController.h; sourceTree = "<group>"; };
+		75386E861F08F6CE00759EA3 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		75386E871F08F6CE00759EA3 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		758F689F183BCD697E8137A6F3B4CE25 /* Pods-ProductivitySuite_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ProductivitySuite_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		76723BADBFC9EC9D5E5C72A05952FFCD /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
 		7767E92B77F69392023DD4DB994E2990 /* IGListSectionMap.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListSectionMap.h; path = Source/Internal/IGListSectionMap.h; sourceTree = "<group>"; };
@@ -798,6 +802,8 @@
 			isa = PBXGroup;
 			children = (
 				FFEADB4C06CFE71FD936A20F68A18958 /* DataManager.swift */,
+				75386E861F08F6CE00759EA3 /* User+CoreDataClass.swift */,
+				75386E871F08F6CE00759EA3 /* User+CoreDataProperties.swift */,
 				B8B980455E528E33727E7C60BC76DFD7 /* Todo+CoreDataClass.swift */,
 				C6183BC717316AF7B298D860841C1CD0 /* Todo+CoreDataProperties.swift */,
 			);
@@ -1133,7 +1139,9 @@
 				76231739139FDBE7F0453C14AB57A3BE /* Todo+CoreDataClass.swift in Sources */,
 				2992BB9D5232A56557450721EE620CB7 /* Todo+CoreDataProperties.swift in Sources */,
 				91476599EC692345A5A9661F2E732CDB /* TodoRouter.swift in Sources */,
+				75386E881F08F6CE00759EA3 /* User+CoreDataClass.swift in Sources */,
 				E61AD40AD25DBA7BF0B02C80FF8C8076 /* UserRouter.swift in Sources */,
+				75386E891F08F6CE00759EA3 /* User+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,6 +9,8 @@
 import UIKit
 import Fabric
 import Crashlytics
+import Alamofire
+import ProductivitySuite
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,8 +20,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        Fabric.with([Crashlytics.self])        
-
+        Fabric.with([Crashlytics.self])
+        
+        User.fetchUsers { (success) in
+            print(success)
+            
+        }
         return true
         
     }
