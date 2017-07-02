@@ -6,12 +6,13 @@ target 'ProductivitySuite_Example' do
     pod 'Crashlytics'
     pod 'ProductivitySuite', :path => '../'
     pod 'SwiftLint'
-    
+    pod 'IGListKit'
+
     target 'ProductivitySuite_Tests' do
         inherit! :search_paths
         
-        pod 'Quick'
-        
+#        pod 'Quick'
+
     end
     
 end
