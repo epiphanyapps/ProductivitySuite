@@ -27,8 +27,14 @@ xcode-select --install
 <td width="33%"><code>sudo gem install fastlane -NV</code></td>
 </tr>
 </table>
+
 # Available Actions
 ## iOS
+### ios addDevCertAndProfiles
+```
+fastlane ios addDevCertAndProfiles
+```
+add development certificate and profiles
 ### ios test
 ```
 fastlane ios test

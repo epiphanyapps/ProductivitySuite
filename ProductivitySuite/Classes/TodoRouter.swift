@@ -31,9 +31,7 @@ public enum TodoRouter: URLRequestConvertible {
     case getTodoList
     case updateTodo(id: String, parameters: Parameters)
     case destroyTodo(id: String)
-    
-    static let baseURLString = "https://nf8ditto54.execute-api.us-east-1.amazonaws.com/dev/"
-    
+        
     var method: HTTPMethod {
         switch self {
         case .createTodo:
@@ -67,7 +65,7 @@ public enum TodoRouter: URLRequestConvertible {
     // MARK: URLRequestConvertible
     
     public func asURLRequest() throws -> URLRequest {
-        let url = try TodoRouter.baseURLString.asURL()
+        let url = try baseURLString.asURL()
         
         var urlRequest = URLRequest(url: url.appendingPathComponent(path))
         urlRequest.httpMethod = method.rawValue
