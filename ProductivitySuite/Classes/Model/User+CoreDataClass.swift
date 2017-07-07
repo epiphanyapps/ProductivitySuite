@@ -22,34 +22,31 @@ public class User: NSManagedObject {
                 case .success(let value):
                     
                     if let users = value as? [[String: Any]] {
-                        
                         let context = SharedDataManager.newWorkerContext()
                         
                         context.perform {
                             
-                            for (index, user) in users.enumerated() {
-                                do {
-//                                    let _ = try User(data: user, insertIntoManagebjectContext: context)
+                            do {
+                                
+                                users.forEach({ (userDict) in
+                                    do {
+                                        let aUser = try User.findOrCreate(data: userDict, insertIntoManagedObjectContext: context)
+                                        debugPrint(aUser)
+                                    } catch let userInitError {
+                                        debugPrint(userInitError)
+                                    }
                                     
-//                                    if users.index(of: user) == index {
-//                                        try context.save()
-//
-//                                    }
-                                } catch (let error) {
-                                    print(error)
-                                    completion?(false)
-                                }
+                                })
+                                
+                                try context.save()
+                                completion?(true)
+                            } catch (let saveError) {
+                                print(saveError)
+                                completion?(false)
                             }
                             
                         }
                         
-                        do {
-                            try context.save()
-                            completion?(true)
-                        } catch (let error) {
-                            print(error)
-                            completion?(false)
-                        }
                         
                     }
                     
@@ -75,9 +72,9 @@ public class User: NSManagedObject {
             throw SerializationError.missing("last")
         }
         
-        guard let checked = data["checked"] as? Bool else {
-            throw SerializationError.missing("checked")
-        }
+//        guard let checked = data["checked"] as? Bool else {
+//            throw SerializationError.missing("checked")
+//        }
         
         guard let createdAtDouble = data["createdAt"] as? Double else {
             throw SerializationError.missing("createdAt")
@@ -89,15 +86,40 @@ public class User: NSManagedObject {
         }
         let updatedAt = unixEpocToDate(timeStamp: updatedAtDouble)
         
-        let entity = NSEntityDescription.entity(forEntityName: "Todo", in: context)!
+        let entity = NSEntityDescription.entity(forEntityName: "User", in: context)!
         self.init(entity: entity, insertInto: context)
         
         self.identifier = id
         self.first = first
         self.last = last
-        self.checked = checked
+//        self.checked = checked
         self.createdAt = createdAt
         self.updatedAt = updatedAt
     }
     
+    /**
+     This method creates and serializes a user object and creates one if none exists.
+     - Note: This methods uniques by `id` parameter of type `String` and throws if certain required parameters are missing.
+    */
+    static func findOrCreate(data: [String: Any], insertIntoManagedObjectContext context: NSManagedObjectContext) throws -> User  {
+        
+        
+        guard let identifier = data["id"] as? String else {
+            throw SerializationError.missing("id")
+        }
+        
+        let request: NSFetchRequest<User> = User.fetchRequest()
+        request.predicate = NSPredicate(format: "identifier == %@", identifier)
+        let results = try! context.fetch(request)
+        
+        switch results.count {
+        case 0:
+            let newUser = try! User(data: data, insertIntoManagedObjectContext: context)
+            return newUser
+        case 1:
+            return results.first!
+        default:
+            fatalError("uniquing is corrupted store")
+        }
+    }
 }
