@@ -27,7 +27,7 @@ class TodoTableViewController: UITableViewController, NSFetchedResultsController
         navigationItem.rightBarButtonItem = crashButton
     }
     
-    func crashButtonTapped(_ sender: AnyObject) {
+    @objc func crashButtonTapped(_ sender: AnyObject) {
         Crashlytics.sharedInstance().crash()
     }
 
