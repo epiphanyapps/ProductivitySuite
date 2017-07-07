@@ -20,22 +20,25 @@ class UsersViewController: UIViewController {
         frame: .zero,
         collectionViewLayout: ListCollectionViewLayout(stickyHeaders: false, topContentInset: 0, stretchToEdge: false)
     )
+    let refreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Users"//.localized()
         view.addSubview(collectionView)
         adapter.dataSource = self
         adapter.collectionView = collectionView
+        collectionView.addSubview(refreshControl)
+        refreshControl.attributedTitle = NSAttributedString(string: "Test", attributes: [NSAttributedStringKey.foregroundColor: UIColor.blue])
+        refreshControl.tintColor = UIColor.blue
+        refreshControl.addTarget(self,
+                                 action: #selector(UsersViewController.updateUsers),
+                                 for: .valueChanged)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        User.fetchUsers { [weak self] (success) in
-            print(success)
-            self?.adapter.performUpdates(animated: true,
-                                        completion: nil)
-            
-        }
+        updateUsers()
     }
     
     override func viewDidLayoutSubviews() {
@@ -48,7 +51,17 @@ class UsersViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    
+    @objc func updateUsers() {
+        User.fetchUsers { [weak self] (success) in
+            self?.refreshControl.endRefreshing()
+            guard success else { return }
+                
+            self?.adapter.performUpdates(animated: true,
+                                         completion: nil)
+            
+        }
+    }
     /*
     // MARK: - Navigation
 
@@ -65,7 +78,6 @@ extension UsersViewController: ListAdapterDataSource {
     
     func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
         let allUsers =  User.all()
-        print(allUsers)
         return allUsers
     }
     

@@ -8,6 +8,7 @@ PODS:
   - IGListKit/Default (3.0.0):
     - IGListKit/Diffing
   - IGListKit/Diffing (3.0.0)
+  - Kingfisher (3.10.3)
   - ProductivitySuite (0.1.0):
     - Alamofire (~> 4.4.0)
     - IGListKit
@@ -17,6 +18,7 @@ DEPENDENCIES:
   - Alamofire (~> 4.4.0)
   - Crashlytics
   - IGListKit
+  - Kingfisher
   - ProductivitySuite (from `../`)
   - SwiftLint
 
@@ -29,9 +31,10 @@ SPEC CHECKSUMS:
   Crashlytics: 79e236942ca1e7fc641df1feb9a275360a78ab6a
   Fabric: 5911403591946b8228ab1c51d98f1d7137e863c6
   IGListKit: 9eab6856a15fa25ad72018ff9d9eb2178c240fff
+  Kingfisher: a0ac82dc5bcf0388dd74b294cf2cc13730c63436
   ProductivitySuite: 0bf26e914bb2d60c5f402bde5bee568e8dc60d50
   SwiftLint: 3537a05b34060e78e7510f04fb7537d738247803
 
-PODFILE CHECKSUM: 5caac7da530559109f4a9eddf703eb1c9d788234
+PODFILE CHECKSUM: 86e27a18addffa46f923ed786f18352badfa14b8
 
 COCOAPODS: 1.2.1

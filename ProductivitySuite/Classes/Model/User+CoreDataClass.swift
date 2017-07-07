@@ -99,6 +99,9 @@ public class User: NSManagedObject {
 //        self.checked = checked
         self.createdAt = createdAt
         self.updatedAt = updatedAt
+        
+        //Optionals
+        self.imageURL = data["image"] as? String
     }
     
     /**
@@ -132,6 +135,7 @@ public class User: NSManagedObject {
      */
     public static func all() -> [User] {
         let request: NSFetchRequest<User> = User.fetchRequest()
+        request.sortDescriptors = [NSSortDescriptor(key: "createdAt", ascending: false)]
         let results = try! SharedDataManager.managedObjectContext.fetch(request)
         return results
     }

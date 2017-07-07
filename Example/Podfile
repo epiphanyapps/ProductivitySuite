@@ -1,5 +1,6 @@
 use_frameworks!
 platform :ios, '10.0'
+inhibit_all_warnings!
 
 target 'ProductivitySuite_Example' do
     
@@ -8,7 +9,7 @@ target 'ProductivitySuite_Example' do
     pod 'ProductivitySuite', :path => '../'
     pod 'SwiftLint'
     pod 'IGListKit'
-#    pod 'Kingfisher', :git => 'https://github.com/onevcat/Kingfisher.git'
+    pod 'Kingfisher'
     
 
 #    target 'ProductivitySuite_Tests' do
