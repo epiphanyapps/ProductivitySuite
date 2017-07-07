@@ -10,6 +10,7 @@ target 'ProductivitySuite_Example' do
     pod 'SwiftLint'
     pod 'IGListKit'
     pod 'Kingfisher'
+    pod 'Localize-Swift'
     
 
 #    target 'ProductivitySuite_Tests' do

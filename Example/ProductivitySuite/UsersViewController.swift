@@ -9,6 +9,7 @@
 import UIKit
 import IGListKit
 import ProductivitySuite
+import Localize_Swift
 
 class UsersViewController: UIViewController {
     
@@ -24,7 +25,7 @@ class UsersViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Users"//.localized()
+        title = "Users".localized()
         view.addSubview(collectionView)
         adapter.dataSource = self
         adapter.collectionView = collectionView
