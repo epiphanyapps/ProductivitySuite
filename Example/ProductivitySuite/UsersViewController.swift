@@ -8,33 +8,41 @@
 
 import UIKit
 import IGListKit
+import ProductivitySuite
 
-class UsersViewController: UIViewController, ListAdapterDataSource {
+class UsersViewController: UIViewController {
     
     lazy var adapter: ListAdapter = {
         return ListAdapter(updater: ListAdapterUpdater(), viewController: self)
     }()
-
-    func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
-        return [ListDiffable]()
-    }
     
-    func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
-        return ListSectionController()
-    }
-    
-    func emptyView(for listAdapter: ListAdapter) -> UIView? {
-        return nil
-    }
-    
-    
+    let collectionView = UICollectionView(
+        frame: .zero,
+        collectionViewLayout: ListCollectionViewLayout(stickyHeaders: false, topContentInset: 0, stretchToEdge: false)
+    )
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        view.addSubview(collectionView)
+        adapter.dataSource = self
+        adapter.collectionView = collectionView
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        User.fetchUsers { [weak self] (success) in
+            print(success)
+            self?.adapter.performUpdates(animated: true,
+                                        completion: nil)
+            
+        }
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        collectionView.frame = view.bounds
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -51,4 +59,22 @@ class UsersViewController: UIViewController, ListAdapterDataSource {
     }
     */
 
+}
+
+extension UsersViewController: ListAdapterDataSource {
+    
+    func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
+        let allUsers =  User.all()
+        print(allUsers)
+        return allUsers
+    }
+    
+    func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
+        return UserSectionController()
+    }
+    
+    func emptyView(for listAdapter: ListAdapter) -> UIView? {
+        return nil
+    }
+    
 }

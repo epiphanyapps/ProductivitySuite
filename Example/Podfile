@@ -8,6 +8,8 @@ target 'ProductivitySuite_Example' do
     pod 'ProductivitySuite', :path => '../'
     pod 'SwiftLint'
     pod 'IGListKit'
+#    pod 'Kingfisher', :git => 'https://github.com/onevcat/Kingfisher.git'
+    
 
 #    target 'ProductivitySuite_Tests' do
 #        inherit! :search_paths

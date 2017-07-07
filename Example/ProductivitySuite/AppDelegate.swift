@@ -22,10 +22,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         Fabric.with([Crashlytics.self])
         
-        User.fetchUsers { (success) in
-            print(success)
-            
-        }
         return true
         
     }

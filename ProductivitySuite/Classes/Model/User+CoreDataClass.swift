@@ -30,8 +30,7 @@ public class User: NSManagedObject {
                                 
                                 users.forEach({ (userDict) in
                                     do {
-                                        let aUser = try User.findOrCreate(data: userDict, insertIntoManagedObjectContext: context)
-                                        debugPrint(aUser)
+                                        _ = try User.findOrCreate(data: userDict, insertIntoManagedObjectContext: context)
                                     } catch let userInitError {
                                         debugPrint(userInitError)
                                     }
@@ -39,10 +38,15 @@ public class User: NSManagedObject {
                                 })
                                 
                                 try context.save()
-                                completion?(true)
+                                DispatchQueue.main.async {
+                                    completion?(true)
+                                }
                             } catch (let saveError) {
                                 print(saveError)
-                                completion?(false)
+                                DispatchQueue.main.async {
+                                    completion?(false)
+                                }
+                                
                             }
                             
                         }
@@ -122,4 +126,30 @@ public class User: NSManagedObject {
             fatalError("uniquing is corrupted store")
         }
     }
+    
+    /**
+     Returns an array of all users on the main thread context
+     */
+    public static func all() -> [User] {
+        let request: NSFetchRequest<User> = User.fetchRequest()
+        let results = try! SharedDataManager.managedObjectContext.fetch(request)
+        return results
+    }
+    
+}
+
+import IGListKit
+
+extension User: ListDiffable {
+    
+    public func diffIdentifier() -> NSObjectProtocol {
+        return identifier as NSObjectProtocol
+    }
+    
+    public func isEqual(toDiffableObject object: ListDiffable?) -> Bool {
+        if self === object { return true }
+        guard let object = object as? User else { return false }
+        return   identifier == object.identifier
+    }
+    
 }
